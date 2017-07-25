@@ -125,19 +125,20 @@ $ docker rm -f my-lovelxc-container
 $ docker run -d --name="my-lovelxc-container" -e NAME="The world" rhtgptetraining/lovelxc
 ```
 
-#### 12 - Again, tail the standard output:
+#### 12 - Again, tail the standard output
 ```
-$ docker logs -f gpte-lovelxc
+$ docker logs -f my-lovelxc-container
 ```
 
-#### 13 - Review the output of this new container and press Ctrl+C when finished.
-
-
+#### 13 - Review the output of this new container and press Ctrl+C when finished   
+   
+   
+   
 ### Examine Mounted Volume
 
 #### 14 - Execute the docker inspect command and retrieve the path on the host operating system to the container volume
 ```
-$ docker inspect -f '{{json .Mounts}}' gpte-lovelxc | jq
+$ docker inspect -f '{{json .Mounts}}' my-lovelxc-container | jq
 ```
 ```
 [
@@ -165,7 +166,7 @@ The world loves linux containers
 
 #### 16 - Delete the running container
 ```
-$ docker rm -f gpte-lovelxc
+$ docker rm -f my-lovelxc-container
 ```
  
 #### 17 - Delete the image

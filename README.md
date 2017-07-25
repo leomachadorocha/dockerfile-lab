@@ -133,9 +133,9 @@ $ docker logs -f my-lovelxc-container
 #### 13 - Review the output of this new container and press Ctrl+C when finished   
    
    
-==========================
+=================================================================================================================
 ### Examine Mounted Volume
-==========================
+
 
 #### 14 - Execute the docker inspect command and retrieve the path on the host operating system to the container volume
 ```
@@ -163,8 +163,11 @@ $ cat /var/lib/docker/volumes/3f249a116633074e34840ddea836f26a570b7ef36bcdb01cdb
 The world loves linux containers
 The world loves linux containers
 The world loves linux containers
-```
+```  
 
+=================================================================================================================   
+   
+   
 #### 16 - Delete the running container
 ```
 $ docker rm -f my-lovelxc-container

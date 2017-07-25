@@ -132,7 +132,8 @@ $ docker logs -f gpte-lovelxc
 
 #### 13 - Review the output of this new container and press Ctrl+C when finished.
 
-## Examine Mounted Volume
+
+### Examine Mounted Volume
 
 #### 14 - Execute the docker inspect command and retrieve the path on the host operating system to the container volume
 ```

@@ -44,9 +44,7 @@ done
 $ chmod 755 loveLXC.sh
 ```
 
-#### 4 - Create a Dockerfile that instructs Docker to add your shell script to the BusyBox base image and execute that shell script on container startup:
-a) Create a text file called Dockerfile in the busyBox_project directory.
-b) Add the following contents to Dockerfile:
+#### 4 - Create a Dockerfile in the busyBox_project directory that instructs Docker to add your shell script to the BusyBox base image and execute that shell script on container startup
 ```
 # Example of very simple Dockerfile based on minimalistic BusyBox base image
 # Please read through each comment to gain a better understanding of what this Dockerfile does

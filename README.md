@@ -132,7 +132,47 @@ $ docker logs -f gpte-lovelxc
 
 #### 13 - Review the output of this new container and press Ctrl+C when finished.
 
-#### 14 - 
+# Examine Mounted Volume
 
-#### 15 - 
+#### 14 - Execute the docker inspect command and retrieve the path on the host operating system to the container volume
+```
+$ docker inspect -f '{{json .Mounts}}' gpte-lovelxc | jq
+```
+```
+[
+    {
+        "Destination": "/var/lovelxc",
+        "Driver": "local",
+        "Mode": "",
+        "Name": "3f249a116633074e34840ddea836f26a570b7ef36bcdb01cdbd22f8f37cf4705",
+        "Propagation": "",
+        "RW": true,
+        "Source": "/var/lib/docker/volumes/3f249a116633074e34840ddea836f26a570b7ef36bcdb01cdbd22f8f37cf4705/_data"
+    }
+]
+```
 
+#### 15 - View the contents of the file written by the script to this external volume on the host operating system
+```
+$ cat /var/lib/docker/volumes/3f249a116633074e34840ddea836f26a570b7ef36bcdb01cdbd22f8f37cf4705/_data/super_top_secret_log.log  | more
+```
+```
+The world loves linux containers
+The world loves linux containers
+The world loves linux containers
+```
+
+#### 16 - Delete the running container
+```
+$ docker rm -f gpte-lovelxc
+```
+ 
+#### 17 - Delete the image
+```
+$ docker rmi rhtgptetraining/lovelxc
+```
+
+#### 18 - Delete the busybox base image
+```
+$ docker rmi busybox
+```

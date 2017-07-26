@@ -71,9 +71,12 @@ $ docker inspect -f '{{json .Mounts}}' my-lovelxc-container | jq
     }
 ]
 ```
-OBS:
-/var/lovelxc               = directory in the container
-/var/lib/docker/volumes/   = directory in the host
+OBS:  
+
+/var/lovelxc               = directory in the container   
+
+/var/lib/docker/volumes/   = directory in the host   
+
 
 #### 12 - View the contents of the file written by the script to this external volume on the host operating system
 ```

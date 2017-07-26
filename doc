@@ -44,4 +44,9 @@ PUSH
 --------------------------------------------------------------------------------------------
 pushes your image to Docker Cloud, or alternately to a private registry
 
-Note: If you want to learn more about Dockerfiles, check out Best practices for writing Dockerfiles.
+
+
+Saber Mais:
+Best practices for writing Dockerfiles (https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
+
+

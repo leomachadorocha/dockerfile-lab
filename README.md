@@ -73,7 +73,7 @@ $ docker inspect -f '{{json .Mounts}}' my-lovelxc-container | jq
 ```
 OBS:  
 
-/var/lovelxc               = directory in the container   
+/var/lovelxc               = directory in the container ($ docker exec -it my-lovelxc-container sh)
 
 /var/lib/docker/volumes/   = directory in the host   
 

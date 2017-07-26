@@ -1,5 +1,6 @@
-# Example of very simple Dockerfile based on minimalistic BusyBox base image
-# Please read through each comment to gain a better understanding of what this Dockerfile does
+# Example of very simple Dockerfile based on minimalistic BusyBox base image.
+# This Dockerfile instructs Docker to add the loveLXC.sh shell script to the 
+# BusyBox base image and execute it on container startup.
 
 # Docker will pull from docker.io if base image does not already exist in local Docker repo
 FROM busybox

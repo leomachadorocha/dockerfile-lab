@@ -12,9 +12,9 @@ git clone https://github.com/leomachadorocha/dockerfile-lab.git
 $ chmod 755 loveLXC.sh
 ```
 
-#### 3 - While still in the busyBox_project directory, build the Docker image
+#### 3 - While still in the project directory, build the Docker image
 ```
-$ docker build --rm=true -t rhtgptetraining/lovelxc .
+$ docker build --rm=true -t demorepo/lovelxc .
 ```
 
 #### 4 - Note the presence of your new custom Docker image
@@ -24,7 +24,7 @@ $ docker images
 
 #### 5 - Run a new container (without passing an environment variable) from your custom image
 ```
-$ docker run -d --name="my-lovelxc-container" rhtgptetraining/lovelxc
+$ docker run -d --name="my-lovelxc-container" demorepo/lovelxc
 ```
 
 #### 6 - Tail the standard output of the container
@@ -38,7 +38,7 @@ $ docker logs -f my-lovelxc-container
 #### 8 - Delete the existing container and re-instantiate using an environment variable
 ```
 $ docker rm -f my-lovelxc-container
-$ docker run -d --name="my-lovelxc-container" -e NAME="The world" rhtgptetraining/lovelxc
+$ docker run -d --name="my-lovelxc-container" -e NAME="The world" demorepo/lovelxc
 ```
 
 #### 9 - Again, tail the standard output
@@ -92,7 +92,7 @@ $ docker rm -f my-lovelxc-container
  
 #### 14 - Delete the image
 ```
-$ docker rmi rhtgptetraining/lovelxc
+$ docker rmi demorepo/lovelxc
 ```
 
 #### 15 - Delete the busybox base image
